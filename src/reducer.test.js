@@ -24,7 +24,7 @@ describe('unicafe reducer', () => {
     }
     const state = initialState
 
-    deepFreeze(state)
+    deepFreeze(state) // to make sure reducer has been correctly defined as immutable function
     const newState = counterReducer(state, action)
     expect(newState).toEqual({
       good: 1,
